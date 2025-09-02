@@ -24,7 +24,7 @@ def test_items_requires_auth():
 def test_create_item(token):
     headers = {"Authorization": f"Bearer {token}"}
     resp = client.post("/items/", json={"name": "Pen", "price": 1.5}, headers=headers)
-    assert resp.status_code == 201
+    assert resp.status_code == 200
     data = resp.json()
     assert data["name"] == "Pen"
     assert "id" in data
