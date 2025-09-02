@@ -11,17 +11,9 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
 
-Open: http://127.0.0.1:8000/docs
-
 ## Endpoints
 
-- POST /items/ – create item
-- GET /items/{id} – read item
-- PUT /items/{id} – update item
-- DELETE /items/{id} – delete item
-- GET /items/ – list items
-- POST /auth/register – register
-- POST /auth/login – login
+Open -> http://127.0.0.1:8000/docs or http://127.0.0.1:8000/redoc
 
 ## Rate Limiting
 
