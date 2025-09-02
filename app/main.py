@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from .exceptions import register_exception_handlers
 from .middleware import RateLimitMiddleware
 from .routers import items, auth
+import os
 
 
 app = FastAPI(title="FastAPI Assignment", version="1.0.0")
@@ -13,8 +14,9 @@ app = FastAPI(title="FastAPI Assignment", version="1.0.0")
 register_exception_handlers(app)
 
 
-# Rate limiting middleware: 5 req / 60s per IP
-app.add_middleware(RateLimitMiddleware, limit=5, window_seconds=60)  # type: ignore
+# Add rate limit only if not in test mode
+if not os.getenv("TESTING"):
+    app.add_middleware(RateLimitMiddleware, limit=5, window_seconds=60)  # type: ignore
 
 
 # Routers

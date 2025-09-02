@@ -48,6 +48,16 @@ curl -X PUT http://127.0.0.1:8000/items/1 \
 curl -X DELETE http://127.0.0.1:8000/items/1
 ```
 
+## Tests (Automatic)
+
+Run below commands
+
+```bash
+cd maveric_item_price
+$env:TESTING="1"
+pytest -v
+```
+
 ## Docker (bonus)
 
 ```bash
