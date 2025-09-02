@@ -7,7 +7,7 @@ from .routers import items, auth
 import os
 
 
-app = FastAPI(title="FastAPI Assignment", version="1.0.0")
+app = FastAPI(title="Maveric Items Price Assignment", version="1.0.0")
 
 
 # Register custom exception handlers

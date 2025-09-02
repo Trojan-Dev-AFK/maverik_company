@@ -27,28 +27,7 @@ Open: http://127.0.0.1:8000/docs
 
 Global middleware: 5 requests / 60 seconds per IP. Exceeding returns 429 with { "detail": "Rate limit exceeded" }.
 
-## Tests (manual)
-
-Use the Swagger UI or curl examples:
-
-```bash
-curl -X POST http://127.0.0.1:8000/items/ \
--H 'Content-Type: application/json' \
--d '{"name":"Pen","price":1.5}'
-
-
-curl http://127.0.0.1:8000/items/1
-
-
-curl -X PUT http://127.0.0.1:8000/items/1 \
--H 'Content-Type: application/json' \
--d '{"name":"Blue Pen","price":2.0,"description":"Gel"}'
-
-
-curl -X DELETE http://127.0.0.1:8000/items/1
-```
-
-## Tests (Automatic)
+## Tests
 
 Run below commands
 
@@ -58,9 +37,9 @@ $env:TESTING="1"
 pytest -v
 ```
 
-## Docker (bonus)
+## Docker (Bonus)
 
 ```bash
-docker build -t fastapi-assignment .
-docker run -p 8000:8000 fastapi-assignment
+docker build -t maveric_item_price .
+docker run -p 8000:8000 maveric_item_price
 ```
