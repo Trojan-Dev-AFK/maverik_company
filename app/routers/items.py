@@ -9,7 +9,7 @@ from .. import crud
 router = APIRouter()
 
 
-@router.post("/", response_model=ItemResponse, status_code=201)
+@router.post("/", response_model=ItemResponse, status_code=200)
 def create_item(payload: ItemCreate, user: str = Depends(get_current_user)):
     return crud.create_item(payload)
 
