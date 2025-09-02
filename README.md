@@ -1,4 +1,4 @@
-# FastAPI Assignment
+# FastAPI Application
 
 
 A minimal FastAPI app demonstrating CRUD, Pydantic models, custom exceptions, and rate limiting. Includes optional JWT auth and Dockerfile.
