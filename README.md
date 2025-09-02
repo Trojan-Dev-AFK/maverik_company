@@ -29,6 +29,8 @@ Global middleware: 5 requests / 60 seconds per IP. Exceeding returns 429 with { 
 
 ## Tests
 
+### Automatic
+
 Run below commands
 
 ```bash
@@ -36,6 +38,12 @@ cd maveric_item_price
 $env:TESTING="1"
 pytest -v
 ```
+
+### Manual
+
+- Install API Dog -> https://apidog.com/download/.
+- Import collection json present inside `apidog_collection` folder into the application.
+- Execute all the available test cases.
 
 ## Docker
 

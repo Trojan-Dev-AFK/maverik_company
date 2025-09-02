@@ -1,0 +1,1107 @@
+{
+  "apidogProject": "1.0.0",
+  "$schema": {
+    "app": "apidog",
+    "type": "project",
+    "version": "1.2.0"
+  },
+  "info": {
+    "name": "Maveric_Company",
+    "description": "Postman collection for FastAPI CRUD + Auth",
+    "mockRule": {
+      "rules": [],
+      "enableSystemRule": true
+    }
+  },
+  "apiCollection": [
+    {
+      "name": "Root",
+      "id": 4780964,
+      "auth": {
+        "type": "bearer",
+        "bearer": {
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huIiwiZXhwIjoxNzU2NzgzMTg4fQ.7poAZStlrnzU9vJJG0meZZHszXQDckW9tSbepfX22sE"
+        }
+      },
+      "securityScheme": {},
+      "parentId": 0,
+      "serverId": "",
+      "description": "",
+      "identityPattern": {
+        "httpApi": {
+          "type": "methodAndPath",
+          "bodyType": ""
+        }
+      },
+      "shareSettings": {},
+      "visibility": "SHARED",
+      "moduleId": 876023,
+      "preProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "postProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "inheritPostProcessors": {},
+      "inheritPreProcessors": {},
+      "items": [
+        {
+          "name": "Register User",
+          "api": {
+            "id": "20997176",
+            "method": "post",
+            "path": "http://127.0.0.1:8000/auth/register",
+            "parameters": {
+              "query": [],
+              "path": [],
+              "cookie": [],
+              "header": []
+            },
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "30581766",
+                "code": 200,
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": []
+                },
+                "description": "",
+                "contentType": "json",
+                "mediaType": "",
+                "oasExtensions": ""
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "text/plain",
+              "parameters": [
+                {
+                  "required": false,
+                  "description": "",
+                  "type": "string",
+                  "id": "F2HN5WhVR0",
+                  "example": "john",
+                  "enable": true,
+                  "name": "username"
+                },
+                {
+                  "required": false,
+                  "description": "",
+                  "type": "string",
+                  "id": "R1SkR0nUaP",
+                  "example": "secret123",
+                  "enable": true,
+                  "name": "password"
+                }
+              ],
+              "mediaType": "application/json",
+              "examples": [
+                {
+                  "value": "",
+                  "mediaType": "text/plain",
+                  "description": ""
+                },
+                {
+                  "mediaType": "application/json",
+                  "value": "{\r\n  \"username\": \"john\",\r\n  \"password\": \"secret123\"\r\n}\r\n"
+                }
+              ],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "released",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 0,
+            "cases": [
+              {
+                "id": 29732770,
+                "type": "http",
+                "path": null,
+                "name": "Success",
+                "responseId": 30581766,
+                "parameters": {
+                  "path": [],
+                  "query": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {},
+                "requestBody": {
+                  "parameters": [],
+                  "data": "{\n  \"username\": \"john\",\n  \"password\": \"secret123\"\n}",
+                  "type": "text/plain",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "requestResult": null,
+                "visibility": "INHERITED",
+                "moduleId": 876023,
+                "categoryId": 0,
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            ],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [
+              "BLANK.30581766"
+            ],
+            "visibility": "INHERITED",
+            "moduleId": 876023,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Login",
+          "api": {
+            "id": "20997177",
+            "method": "post",
+            "path": "http://127.0.0.1:8000/auth/login",
+            "parameters": {
+              "query": [],
+              "path": [],
+              "cookie": [],
+              "header": []
+            },
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "30581767",
+                "code": 200,
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": []
+                },
+                "description": "",
+                "contentType": "json",
+                "mediaType": "",
+                "oasExtensions": ""
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "text/plain",
+              "parameters": [],
+              "mediaType": "application/json",
+              "examples": [
+                {
+                  "value": "{\n  \"username\": \"john\",\n  \"password\": \"secret123\"\n}",
+                  "mediaType": "text/plain",
+                  "description": ""
+                },
+                {
+                  "mediaType": "application/json",
+                  "value": "{\n  \"username\": \"john\",\n  \"password\": \"secret123\"\n}\n"
+                }
+              ],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "released",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 6,
+            "cases": [
+              {
+                "id": 29732771,
+                "type": "http",
+                "path": null,
+                "name": "Success",
+                "responseId": 30581767,
+                "parameters": {
+                  "path": [],
+                  "query": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "commonParameters": {},
+                "requestBody": {
+                  "parameters": [],
+                  "data": "{\n  \"username\": \"john\",\n  \"password\": \"secret123\"\n}",
+                  "type": "text/plain",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "requestResult": null,
+                "visibility": "INHERITED",
+                "moduleId": 876023,
+                "categoryId": 0,
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            ],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [
+              "BLANK.30581767"
+            ],
+            "visibility": "INHERITED",
+            "moduleId": 876023,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Create Item",
+          "api": {
+            "id": "20997178",
+            "method": "post",
+            "path": "http://127.0.0.1:8000/items/",
+            "parameters": {
+              "query": [],
+              "path": [],
+              "cookie": [],
+              "header": [
+                {
+                  "id": "G73qkOX9DR",
+                  "name": "Authorization",
+                  "required": true,
+                  "description": "",
+                  "example": "Bearer {{token}}",
+                  "type": "string",
+                  "enable": true,
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              ]
+            },
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "30581768",
+                "code": 200,
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": []
+                },
+                "description": "",
+                "contentType": "json",
+                "mediaType": "",
+                "oasExtensions": ""
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "text/plain",
+              "parameters": [],
+              "mediaType": "application/json",
+              "examples": [
+                {
+                  "value": "{\n  \"name\": \"Pen\",\n  \"price\": 1.5,\n  \"description\": \"Blue ink\"\n}",
+                  "mediaType": "text/plain",
+                  "description": ""
+                },
+                {
+                  "mediaType": "application/json",
+                  "value": "{\n  \"name\": \"Pencil\",\n  \"price\": 0.5,\n  \"description\": \"Black Pencil\"\n}"
+                }
+              ],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "released",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 12,
+            "cases": [
+              {
+                "id": 29732772,
+                "type": "http",
+                "path": null,
+                "name": "Success",
+                "responseId": 30581768,
+                "parameters": {
+                  "path": [],
+                  "query": [],
+                  "cookie": [],
+                  "header": [
+                    {
+                      "name": "Authorization",
+                      "value": "Bearer {{token}}",
+                      "enable": true,
+                      "id": "tDYHlLi2al",
+                      "relatedName": "Authorization"
+                    }
+                  ]
+                },
+                "commonParameters": {},
+                "requestBody": {
+                  "parameters": [],
+                  "data": "{\n  \"name\": \"Pen\",\n  \"price\": 1.5,\n  \"description\": \"Blue ink\"\n}",
+                  "type": "text/plain",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "requestResult": null,
+                "visibility": "INHERITED",
+                "moduleId": 876023,
+                "categoryId": 0,
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            ],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [
+              "BLANK.30581768"
+            ],
+            "visibility": "INHERITED",
+            "moduleId": 876023,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Get Item by ID",
+          "api": {
+            "id": "20997179",
+            "method": "get",
+            "path": "http://127.0.0.1:8000/items/{item_id}",
+            "parameters": {
+              "query": [],
+              "path": [
+                {
+                  "id": "item_id#0",
+                  "name": "item_id",
+                  "required": true,
+                  "description": "",
+                  "type": "string",
+                  "enable": true,
+                  "example": "1"
+                }
+              ],
+              "cookie": [],
+              "header": [
+                {
+                  "id": "8AtDZVRQlX",
+                  "name": "Authorization",
+                  "required": true,
+                  "description": "",
+                  "example": "Bearer {{token}}",
+                  "type": "string",
+                  "enable": true
+                }
+              ]
+            },
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "30581769",
+                "code": 200,
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": []
+                },
+                "description": "",
+                "contentType": "json",
+                "mediaType": "",
+                "oasExtensions": ""
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "none",
+              "parameters": [],
+              "mediaType": "",
+              "examples": [],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "released",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 18,
+            "cases": [
+              {
+                "id": 29732773,
+                "type": "http",
+                "path": null,
+                "name": "Success",
+                "responseId": 30581769,
+                "parameters": {
+                  "path": [],
+                  "query": [],
+                  "cookie": [],
+                  "header": [
+                    {
+                      "name": "Authorization",
+                      "value": "Bearer {{token}}",
+                      "enable": true,
+                      "id": "HK22PwtNJj",
+                      "relatedName": "Authorization"
+                    }
+                  ]
+                },
+                "commonParameters": {},
+                "requestBody": {
+                  "parameters": [],
+                  "type": "none"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "requestResult": null,
+                "visibility": "INHERITED",
+                "moduleId": 876023,
+                "categoryId": 0,
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            ],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [
+              "BLANK.30581769"
+            ],
+            "visibility": "INHERITED",
+            "moduleId": 876023,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Update Item",
+          "api": {
+            "id": "20997180",
+            "method": "put",
+            "path": "http://127.0.0.1:8000/items/{item_id}",
+            "parameters": {
+              "query": [],
+              "path": [
+                {
+                  "id": "item_id#0",
+                  "name": "item_id",
+                  "required": true,
+                  "description": "",
+                  "type": "string",
+                  "enable": true,
+                  "example": "1"
+                }
+              ],
+              "cookie": [],
+              "header": [
+                {
+                  "id": "krRqcvIvPp",
+                  "name": "Authorization",
+                  "required": true,
+                  "description": "",
+                  "example": "Bearer {{token}}",
+                  "type": "string",
+                  "enable": true
+                }
+              ]
+            },
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "30581770",
+                "code": 200,
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": []
+                },
+                "description": "",
+                "contentType": "json",
+                "mediaType": "",
+                "oasExtensions": ""
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "text/plain",
+              "parameters": [],
+              "mediaType": "application/json",
+              "examples": [
+                {
+                  "value": "",
+                  "mediaType": "text/plain",
+                  "description": ""
+                },
+                {
+                  "mediaType": "application/json",
+                  "value": "{\n  \"name\": \"Gel Pen\",\n  \"price\": 2.0,\n  \"description\": \"Black ink\"\n}"
+                }
+              ],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "released",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 24,
+            "cases": [
+              {
+                "id": 29732774,
+                "type": "http",
+                "path": null,
+                "name": "Success",
+                "responseId": 30581770,
+                "parameters": {
+                  "path": [],
+                  "query": [],
+                  "cookie": [],
+                  "header": [
+                    {
+                      "name": "Authorization",
+                      "value": "Bearer {{token}}",
+                      "enable": true,
+                      "id": "1AMGSqgovz",
+                      "relatedName": "Authorization"
+                    }
+                  ]
+                },
+                "commonParameters": {},
+                "requestBody": {
+                  "parameters": [],
+                  "data": "{\n  \"name\": \"Gel Pen\",\n  \"price\": 2.0,\n  \"description\": \"Black ink\"\n}",
+                  "type": "text/plain",
+                  "generateMode": "normal"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "requestResult": null,
+                "visibility": "INHERITED",
+                "moduleId": 876023,
+                "categoryId": 0,
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            ],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [
+              "BLANK.30581770"
+            ],
+            "visibility": "INHERITED",
+            "moduleId": 876023,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "Delete Item",
+          "api": {
+            "id": "20997181",
+            "method": "delete",
+            "path": "http://127.0.0.1:8000/items/{item_id}",
+            "parameters": {
+              "query": [],
+              "path": [
+                {
+                  "id": "item_id#0",
+                  "name": "item_id",
+                  "required": true,
+                  "description": "",
+                  "type": "string",
+                  "enable": true,
+                  "example": "1"
+                }
+              ],
+              "cookie": [],
+              "header": [
+                {
+                  "id": "ZJ1MGlv3jk",
+                  "name": "Authorization",
+                  "required": true,
+                  "description": "",
+                  "example": "Bearer {{token}}",
+                  "type": "string",
+                  "enable": true
+                }
+              ]
+            },
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "30581771",
+                "code": 200,
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": []
+                },
+                "description": "",
+                "contentType": "json",
+                "mediaType": "",
+                "oasExtensions": ""
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "none",
+              "parameters": [],
+              "mediaType": "",
+              "examples": [],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "released",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 30,
+            "cases": [
+              {
+                "id": 29732775,
+                "type": "http",
+                "path": null,
+                "name": "Success",
+                "responseId": 30581771,
+                "parameters": {
+                  "path": [],
+                  "query": [],
+                  "cookie": [],
+                  "header": [
+                    {
+                      "name": "Authorization",
+                      "value": "Bearer {{token}}",
+                      "enable": true,
+                      "id": "ttE2OOseBi",
+                      "relatedName": "Authorization"
+                    }
+                  ]
+                },
+                "commonParameters": {},
+                "requestBody": {
+                  "parameters": [],
+                  "type": "none"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "requestResult": null,
+                "visibility": "INHERITED",
+                "moduleId": 876023,
+                "categoryId": 0,
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            ],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [
+              "BLANK.30581771"
+            ],
+            "visibility": "INHERITED",
+            "moduleId": 876023,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
+        {
+          "name": "List All Items",
+          "api": {
+            "id": "20997182",
+            "method": "get",
+            "path": "http://127.0.0.1:8000/items/",
+            "parameters": {
+              "query": [],
+              "path": [],
+              "cookie": [],
+              "header": [
+                {
+                  "id": "V3SXDjXnsE",
+                  "name": "Authorization",
+                  "required": true,
+                  "description": "",
+                  "example": "Bearer {{token}}",
+                  "type": "string",
+                  "enable": true
+                }
+              ]
+            },
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "30581772",
+                "code": 200,
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {},
+                  "x-apidog-orders": []
+                },
+                "description": "",
+                "contentType": "json",
+                "mediaType": "",
+                "oasExtensions": ""
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "none",
+              "parameters": [],
+              "mediaType": "",
+              "examples": [],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "released",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 36,
+            "cases": [
+              {
+                "id": 29732776,
+                "type": "http",
+                "path": null,
+                "name": "Success",
+                "responseId": 30581772,
+                "parameters": {
+                  "path": [],
+                  "query": [],
+                  "cookie": [],
+                  "header": [
+                    {
+                      "name": "Authorization",
+                      "value": "Bearer {{token}}",
+                      "enable": true,
+                      "id": "wiPTWzTEsN",
+                      "relatedName": "Authorization"
+                    }
+                  ]
+                },
+                "commonParameters": {},
+                "requestBody": {
+                  "parameters": [],
+                  "type": "none"
+                },
+                "auth": {},
+                "securityScheme": {},
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "requestResult": null,
+                "visibility": "INHERITED",
+                "moduleId": 876023,
+                "categoryId": 0,
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            ],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [
+              "BLANK.30581772"
+            ],
+            "visibility": "INHERITED",
+            "moduleId": 876023,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        }
+      ]
+    }
+  ],
+  "socketCollection": [],
+  "docCollection": [],
+  "webSocketCollection": [],
+  "socketIOCollection": [],
+  "responseCollection": [
+    {
+      "_databaseId": 1105710,
+      "updatedAt": "2025-09-02T02:15:14.000Z",
+      "name": "Root",
+      "type": "root",
+      "children": [],
+      "moduleId": 876023,
+      "parentId": 0,
+      "id": 1105710,
+      "ordering": [],
+      "items": []
+    }
+  ],
+  "schemaCollection": [
+    {
+      "id": 2511136,
+      "name": "Root",
+      "visibility": "SHARED",
+      "moduleId": 876023,
+      "items": [],
+      "ordering": []
+    }
+  ],
+  "securitySchemeCollection": [
+    {
+      "id": 725266,
+      "moduleId": 876023,
+      "name": "Root",
+      "items": [],
+      "ordering": []
+    }
+  ],
+  "requestCollection": [
+    {
+      "name": "Root",
+      "children": [],
+      "ordering": [
+        "requestFolder.7970271"
+      ],
+      "items": []
+    }
+  ],
+  "apiTestCaseCollection": [
+    {
+      "name": "Root",
+      "children": [],
+      "items": []
+    }
+  ],
+  "testCaseReferences": [],
+  "environments": [],
+  "commonScripts": [],
+  "databaseConnections": [],
+  "globalVariables": [
+    {
+      "id": "1058072",
+      "variables": [
+        {
+          "name": "token",
+          "value": "",
+          "description": "",
+          "isBindInitial": true,
+          "initialValue": "",
+          "isSync": true
+        }
+      ]
+    }
+  ],
+  "commonParameters": null,
+  "projectSetting": {
+    "id": "1058113",
+    "auth": {},
+    "securityScheme": {},
+    "gateway": [],
+    "language": "en-US",
+    "apiStatuses": [
+      "developing",
+      "testing",
+      "released",
+      "deprecated"
+    ],
+    "mockSettings": {},
+    "preProcessors": [],
+    "postProcessors": [],
+    "advancedSettings": {
+      "enableJsonc": false,
+      "enableBigint": false,
+      "responseValidate": true,
+      "enableTestScenarioSetting": false,
+      "enableYAPICompatScript": false,
+      "isDefaultUrlEncoding": 3,
+      "publishedDocUrlRules": {
+        "defaultRule": "SLUGIFY_WITH_RESOURCE_KEY",
+        "resourceKeyStandard": "NEW"
+      }
+    },
+    "initialDisabledMockIds": [],
+    "servers": [
+      {
+        "id": "default",
+        "name": "Default Server"
+      }
+    ],
+    "cloudMock": {
+      "security": "free",
+      "enable": false,
+      "tokenKey": "apidogToken"
+    }
+  },
+  "customFunctions": [],
+  "projectAssociations": []
+}
