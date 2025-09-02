@@ -42,6 +42,6 @@ pytest -v
 ## Docker
 
 ```bash
-docker build -t maveric_item_price .
-docker run -p 8000:8000 maveric_item_price
+docker build -t fastapi_application .
+docker run -p 8000:8000 fastapi_application
 ```
