@@ -27,7 +27,7 @@ Global middleware: 5 requests / 60 seconds per IP. Exceeding returns 429 with { 
 Run below commands
 
 ```bash
-cd maverik_company
+cd fastapi_application
 $env:TESTING="1"
 pytest -v
 ```
