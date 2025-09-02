@@ -20,8 +20,8 @@ Open: http://127.0.0.1:8000/docs
 - PUT /items/{id} – update item
 - DELETE /items/{id} – delete item
 - GET /items/ – list items
-- POST /auth/register – (bonus) register
-- POST /auth/login – (bonus) login
+- POST /auth/register – register
+- POST /auth/login – login
 
 ## Rate Limiting
 
@@ -37,7 +37,7 @@ $env:TESTING="1"
 pytest -v
 ```
 
-## Docker (Bonus)
+## Docker
 
 ```bash
 docker build -t maveric_item_price .

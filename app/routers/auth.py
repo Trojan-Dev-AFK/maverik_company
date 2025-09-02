@@ -1,4 +1,4 @@
-# Bonus (register & login)
+# Register & login
 
 from fastapi import APIRouter, HTTPException
 from ..models import UserCreate, TokenResponse
