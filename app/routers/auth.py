@@ -11,7 +11,7 @@ router = APIRouter()
 _users: dict[str, str] = {}
 
 
-@router.post("/register", status_code=201)
+@router.post("/register", status_code=200)
 def register(user: UserCreate):
     if user.username in _users:
         raise HTTPException(status_code=400, detail="Username already exists")
