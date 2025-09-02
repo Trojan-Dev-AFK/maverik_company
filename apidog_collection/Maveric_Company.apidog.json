@@ -20,7 +20,7 @@
       "auth": {
         "type": "bearer",
         "bearer": {
-          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huIiwiZXhwIjoxNzU2NzgzMTg4fQ.7poAZStlrnzU9vJJG0meZZHszXQDckW9tSbepfX22sE"
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huIiwiZXhwIjoxNzU2Nzg0NTYzfQ.wKq9W_1qguSYtXf9OqhaHJ5UfhzoiIv-zuQHBdlP1e4"
         }
       },
       "securityScheme": {},
@@ -53,6 +53,74 @@
       "inheritPostProcessors": {},
       "inheritPreProcessors": {},
       "items": [
+        {
+          "name": "Health Checker",
+          "api": {
+            "id": "20998176",
+            "method": "get",
+            "path": "http://127.0.0.1:8000/health",
+            "parameters": {},
+            "auth": {},
+            "securityScheme": {},
+            "commonParameters": {
+              "query": [],
+              "body": [],
+              "cookie": [],
+              "header": []
+            },
+            "responses": [
+              {
+                "id": "30588523",
+                "code": 200,
+                "name": "Success",
+                "headers": [],
+                "jsonSchema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "description": "",
+                "contentType": "json",
+                "mediaType": "",
+                "oasExtensions": ""
+              }
+            ],
+            "responseExamples": [],
+            "requestBody": {
+              "type": "none",
+              "parameters": [],
+              "mediaType": "",
+              "examples": [],
+              "oasExtensions": ""
+            },
+            "description": "",
+            "tags": [],
+            "status": "developing",
+            "serverId": "",
+            "operationId": "",
+            "sourceUrl": "",
+            "ordering": 46,
+            "cases": [],
+            "mocks": [],
+            "customApiFields": "{}",
+            "advancedSettings": {
+              "disabledSystemHeaders": {}
+            },
+            "mockScript": {},
+            "codeSamples": [],
+            "commonResponseStatus": {},
+            "responseChildren": [
+              "BLANK.30588523"
+            ],
+            "visibility": "INHERITED",
+            "moduleId": 876023,
+            "oasExtensions": "",
+            "type": "http",
+            "preProcessors": [],
+            "postProcessors": [],
+            "inheritPostProcessors": {},
+            "inheritPreProcessors": {}
+          }
+        },
         {
           "name": "Register User",
           "api": {
@@ -1103,5 +1171,34 @@
     }
   },
   "customFunctions": [],
-  "projectAssociations": []
+  "projectTestCaseCategories": [
+    {
+      "id": 152611,
+      "name": "Positive"
+    },
+    {
+      "id": 152612,
+      "name": "Negative"
+    },
+    {
+      "id": 152613,
+      "name": "Boundary Value"
+    },
+    {
+      "id": 152614,
+      "name": "Security"
+    },
+    {
+      "id": 152615,
+      "name": "Other"
+    }
+  ],
+  "projectAssociations": [],
+  "moduleSettings": [
+    {
+      "id": "876023",
+      "name": "Default module",
+      "moduleVariables": []
+    }
+  ]
 }

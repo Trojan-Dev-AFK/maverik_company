@@ -6,7 +6,8 @@ A minimal FastAPI app demonstrating CRUD, Pydantic models, custom exceptions, an
 
 ## Run locally
 ```bash
-python -m venv .venv && source .venv/bin/activate # Windows: .venv\\Scripts\\activate
+python -m venv .venv
+source .venv/bin/activate # or .\.venv\scripts\activate.ps1
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
@@ -26,7 +27,7 @@ Global middleware: 5 requests / 60 seconds per IP. Exceeding returns 429 with { 
 Run below commands
 
 ```bash
-cd maveric_item_price
+cd maverik_company
 $env:TESTING="1"
 pytest -v
 ```
