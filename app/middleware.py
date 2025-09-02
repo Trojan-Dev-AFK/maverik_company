@@ -19,7 +19,6 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
         self.hits: Dict[str, Deque[float]] = defaultdict(deque)
 
     async def dispatch(self, request: Request, call_next):
-        # Extract client IP (respect X-Forwarded-For if present)
         client_ip = request.headers.get("x-forwarded-for")
         if client_ip:
             client_ip = client_ip.split(",")[0].strip()
@@ -29,7 +28,6 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
         now = time.time()
         q = self.hits[client_ip]
 
-        # Evict timestamps outside the window
         while q and (now - q[0]) > self.window:
             q.popleft()
 

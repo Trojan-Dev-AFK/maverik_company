@@ -7,9 +7,7 @@ client = TestClient(app)
 
 @pytest.fixture
 def token():
-    # Register user
     client.post("/auth/register", json={"username": "tester", "password": "secret123"})
-    # Login
     resp = client.post(
         "/auth/login", json={"username": "tester", "password": "secret123"}
     )
@@ -18,7 +16,6 @@ def token():
 
 
 def test_items_requires_auth():
-    # No token → should fail
     resp = client.get("/items/")
     assert resp.status_code == 401
     assert resp.json()["detail"] == "Not authenticated"
@@ -35,13 +32,10 @@ def test_create_item(token):
 
 def test_read_item(token):
     headers = {"Authorization": f"Bearer {token}"}
-    # First create an item
     create_resp = client.post(
         "/items/", json={"name": "Book", "price": 10.0}, headers=headers
     )
     item_id = create_resp.json()["id"]
-
-    # Now read it
     resp = client.get(f"/items/{item_id}", headers=headers)
     assert resp.status_code == 200
     assert resp.json()["id"] == item_id
@@ -53,8 +47,6 @@ def test_update_item(token):
         "/items/", json={"name": "Pencil", "price": 0.5}, headers=headers
     )
     item_id = create_resp.json()["id"]
-
-    # Update
     resp = client.put(
         f"/items/{item_id}", json={"name": "HB Pencil", "price": 0.75}, headers=headers
     )
@@ -68,12 +60,8 @@ def test_delete_item(token):
         "/items/", json={"name": "Eraser", "price": 0.3}, headers=headers
     )
     item_id = create_resp.json()["id"]
-
-    # Delete
     resp = client.delete(f"/items/{item_id}", headers=headers)
     assert resp.status_code == 200
     assert resp.json()["message"] == "Item deleted"
-
-    # Confirm deletion → should 404
     resp2 = client.get(f"/items/{item_id}", headers=headers)
     assert resp2.status_code == 404

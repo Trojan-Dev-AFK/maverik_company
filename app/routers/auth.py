@@ -8,8 +8,7 @@ from ..security import hash_password, verify_password, create_access_token
 router = APIRouter()
 
 
-# very simple in-memory user store
-_users: dict[str, str] = {}  # username -> password_hash
+_users: dict[str, str] = {}
 
 
 @router.post("/register", status_code=201)
