@@ -36,6 +36,7 @@ pytest -v
 
 - Install API Dog -> https://apidog.com/download/.
 - Import collection json present inside `apidog_collection` folder into the application.
+- Make sure to add the access token (after using register and login endpoints) into the Auth section in collection folder settings.
 - Execute all the available test cases.
 
 ## Docker
